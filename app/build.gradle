@@ -1,12 +1,13 @@
-
-apply plugin : 'com.android.application'
-apply plugin : 'kotlin-android'
-apply plugin:  'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+plugins
+        {
+            id 'com.android.application'
+            id 'kotlin-android'
+            id 'kotlin-android-extensions'
+            id 'kotlin-kapt'
+        }
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.notes"
@@ -70,4 +71,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+
+    implementation "it.xabaras.android:recyclerview-swipedecorator:1.2.3"
 }
